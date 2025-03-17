@@ -1,12 +1,12 @@
 package main;
 
 public abstract class RallyCar {
-    protected String manufacturer;
+    protected String make;
     protected String model;
     protected int horsepower;
 
-    public RallyCar(String manufacturer, String model, int horsepower) {
-        this.manufacturer = manufacturer;
+    public RallyCar(String make, String model, int horsepower) {
+        this.make = make;
         this.model = model;
         this.horsepower = horsepower;
     }
