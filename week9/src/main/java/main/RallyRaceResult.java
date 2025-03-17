@@ -14,17 +14,19 @@ public class RallyRaceResult implements RaceResult {
         this.results = new HashMap<>();
     }
 
+    //records points
     @Override
     public void recordResult(Driver driver, int points) {
         if (!results.containsKey(driver)) {  // Ensure no duplicate entries
             results.put(driver, points);
             driver.addPoints(points);
         } else {
-            System.out.println("Warning: Duplicate entry detected for " + driver.getName() + " in " + raceName);
+            System.out.println("Duplicate entry: " + driver.getName() + " in " + raceName);
         }
     }
 
 
+    //displays points
     @Override
     public void displayResults() {
         System.out.println("Race: " + raceName);
