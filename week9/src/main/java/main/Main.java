@@ -39,8 +39,8 @@ public class Main {
         System.out.println("\n===== CHAMPIONSHIP LEADER =====");
         System.out.println(manager.getLeadingDriver().getName() + " with " + manager.getLeadingDriver().getTotalPoints() + " points");
 
-        System.err.println("\n ===== CHAMPIONSHIP STATISTICS =====");
-        System.err.println("Total Drivers: " + manager.getDrivers().size());
+        System.out.println("\n ===== CHAMPIONSHIP STATISTICS =====");
+        System.out.println("Total Drivers: " + manager.getDrivers().size());
         System.out.println("Total Races: " + manager.getRaces().size());
         System.out.println("Average Points Per Driver: " + ChampionshipStatistics.averagePointsPerDriver(manager.getDrivers()));
         System.out.println("Most Successful Country: " + ChampionshipStatistics.mostSuccessfulCountry(manager.getDrivers()));
