@@ -1,5 +1,6 @@
 package main;
 
+//registers drivers
 public class Driver {
     private String name;
     private String country;
@@ -11,10 +12,18 @@ public class Driver {
         this.totalPoints = 0;
     }
 
-    public String getName() { return name; }
-    public String getCountry() { return country; }
-    public int getTotalPoints() { return totalPoints; }
+    //returns the driver's name/country/points
+    public String getName(){
+        return name;
+    }
+    public String getCountry() {
+        return country;
+    }
+    public int getTotalPoints() {
+        return totalPoints;
+    }
 
+    //calcs points
     public void addPoints(int points) {
         this.totalPoints += points;
     }
