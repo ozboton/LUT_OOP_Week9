@@ -1,5 +1,7 @@
 package main;
 
+
+//create rally car class, which is used for asphalt and gravel car
 public abstract class RallyCar {
     protected String make;
     protected String model;
