@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         ChampionshipManager manager = ChampionshipManager.getInstance();
 
+        //Creates drivers and registers them.
         Driver driver1 = new Driver("Sébastien Ogier", "France");
         Driver driver2 = new Driver("Kalle Rovanperä", "Finland");
         Driver driver3 = new Driver("Ott Tänak", "Estonia");
@@ -13,10 +14,12 @@ public class Main {
         manager.registerDriver(driver2);
         manager.registerDriver(driver3);
         manager.registerDriver(driver4);
-        
-        RallyCar car1 = new GravelCar("Toyota", "Yaris", 380);
-        RallyCar car2 = new AsphaltCar("Hyundai", "i20", 400);
 
+        //Creates cars (I am not into cars, I just picked 2 random models and 2 random numbers for horsepower, hope I did not messes up something)
+        RallyCar car1 = new GravelCar("Subaru", "GT86", 370);
+        RallyCar car2 = new AsphaltCar("Vulvo", "240", 390);
+
+        //Registers points to drivers
         RallyRaceResult race1 = new RallyRaceResult("Rally Finland");
         race1.recordResult(driver1, 25);
         race1.recordResult(driver3, 18);
@@ -31,6 +34,7 @@ public class Main {
         race2.recordResult(driver3, 12);
         manager.addRace(race2);
 
+        //Prints out the output to the console
         manager.displayStandings();
         System.out.println("\n===== CHAMPIONSHIP LEADER =====");
         System.out.println(manager.getLeadingDriver().getName() + " with " + manager.getLeadingDriver().getTotalPoints() + " points");
