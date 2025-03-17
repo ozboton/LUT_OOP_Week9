@@ -1,8 +1,8 @@
 package main;
 
 public class GravelCar extends RallyCar {
-    public GravelCar(String manufacturer, String model, int horsepower) {
-        super(manufacturer, model, horsepower);
+    public GravelCar(String make, String model, int horsepower) {
+        super(make, model, horsepower);
     }
 
     @Override
