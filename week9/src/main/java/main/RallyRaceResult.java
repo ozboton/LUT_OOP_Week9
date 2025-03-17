@@ -38,7 +38,7 @@ public class RallyRaceResult implements RaceResult {
             Map.Entry<Driver, Integer> entry = sortedResults.get(i);
             System.out.println("  Position " + (i + 1) + ": " + entry.getKey().getName() + " - " + entry.getValue() + " points");
         }
-        System.err.println("\n");
+        System.out.println("\n");
     }
 
 }
