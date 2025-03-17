@@ -10,6 +10,7 @@ public class ChampionshipManager {
     private List<Driver> drivers;
     private List<RallyRaceResult> races;
 
+    //creates arraylist for drivers and races
     private ChampionshipManager() {
         drivers = new ArrayList<>();
         races = new ArrayList<>();
@@ -22,22 +23,23 @@ public class ChampionshipManager {
         return instance;
     }
 
+    //register drivers
     public void registerDriver(Driver driver) {
         drivers.add(driver);
     }
-
+    //adds race
     public void addRace(RallyRaceResult race) {
         races.add(race);
     }
-
+    //returns a list of drivers
     public List<Driver> getDrivers() {
         return drivers;
     }
-
+    //returns a list of the races
     public List<RallyRaceResult> getRaces() {
         return races;
     }
-    
+    //displays standings
     public void displayStandings() {
         List<Driver> sortedDrivers = drivers.stream()
                 .sorted((a, b) -> Integer.compare(b.getTotalPoints(), a.getTotalPoints()))
@@ -48,7 +50,7 @@ public class ChampionshipManager {
             System.out.println((i + 1) + ". " + driver.getName() + " (" + driver.getCountry() + "): " + driver.getTotalPoints() + " points");
         }
     }
-
+    //returns driver with most points
     public Driver getLeadingDriver() {
         return drivers.stream().max((a, b) -> Integer.compare(a.getTotalPoints(), b.getTotalPoints())).orElse(null);
     }
